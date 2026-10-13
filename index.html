@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#8b3dff">
+
+    <meta name="description"
+          content="Create beautiful personalized birthday wishes,
+          anniversary cards, love letters and heartfelt apologies.">
+
+    <title>Forever Wishes AI | Make Every Moment Special</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow"></div>
+
+    <header class="navbar">
+        <a href="#" class="brand">
+            <span class="brand-icon">♥</span>
+            Forever Wishes <span class="ai-text">AI</span>
+        </a>
+
+        <button class="menu-button" id="menuButton"
+                aria-label="Toggle navigation">☰</button>
+
+        <nav id="navigation">
+            <a href="#home">Home</a>
+            <a href="#creator">Create a Wish</a>
+            <a href="#occasions">Occasions</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    ✨ Every feeling deserves beautiful words
+                </div>
+
+                <h1>
+                    Make Every Moment
+                    <span class="gradient-text">Unforgettable.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Create beautiful wishes, heartfelt apologies,
+                    romantic letters and personalized greeting cards
+                    for the people who make your world special.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#creator" class="button primary-button">
+                        Create Your Wish ♥
+                    </a>
+
+                    <a href="#occasions" class="button secondary-button">
+                        Explore Occasions
+                    </a>
+
+                </div>
+
+                <div class="hero-note">
+                    💗 Your feelings. Your memories. Your story.
+                </div>
+
+            </div>
+
+            <div class="hero-art">
+
+                <div class="floating-heart heart-one">♥</div>
+                <div class="floating-heart heart-two">♡</div>
+                <div class="floating-heart heart-three">♥</div>
+
+                <div class="preview-card">
+
+                    <div class="preview-icon">💌</div>
+
+                    <p class="preview-small">A little message for you</p>
+
+                    <h2>You're My Favorite Person</h2>
+
+                    <p>
+                        Some people make ordinary days
+                        feel extraordinary.
+                    </p>
+
+                    <div class="preview-signature">
+                        Made with ♥ just for you
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OCCASIONS -->
+
+        <section class="section" id="occasions">
+
+            <div class="section-heading">
+
+                <span class="section-label">FIND YOUR FEELING</span>
+
+                <h2>Every Occasion, One Special Message</h2>
+
+                <p>
+                    Choose an occasion to start creating
+                    your personalized greeting.
+                </p>
+
+            </div>
+
+            <div class="occasion-grid">
+
+                <button class="occasion-card"
+                        data-occasion="Birthday">
+                    <span>🎂</span>
+                    <strong>Birthday</strong>
+                    <small>Celebrate their special day</small>
+                </button>
+
+                <button class="occasion-card"
+                        data-occasion="Anniversary">
+                    <span>💍</span>
+                    <strong>Anniversary</strong>
+                    <small>Celebrate your journey</small>
+                </button>
+
+                <button class="occasion-card"
+                        data-occasion="Sorry">
+                    <span>🥺</span>
+                    <strong>Say Sorry</strong>
+                    <small>Express a sincere apology</small>
+                </button>
+
+                <button class="occasion-card"
+                        data-occasion="Love">
+                    <span>❤️</span>
+                    <strong>I Love You</strong>
+                    <small>Tell them how you feel</small>
+                </button>
+
+                <button class="occasion-card"
+                        data-occasion="Friendship">
+                    <span>🫂</span>
+                    <strong>Friendship</strong>
+                    <small>Celebrate your bond</small>
+                </button>
+
+                <button class="occasion-card"
+                        data-occasion="Festival">
+                    <span>🪔</span>
+                    <strong>Festivals</strong>
+                    <small>Share happiness and joy</small>
+                </button>
+
+                <button class="occasion-card"
+                        data-occasion="Thank You">
+                    <span>🌷</span>
+                    <strong>Thank You</strong>
+                    <small>Show your appreciation</small>
+                </button>
+
+                <button class="occasion-card"
+                        data-occasion="Good Morning">
+                    <span>🌅</span>
+                    <strong>Good Morning</strong>
+                    <small>Start their day with a smile</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- WISH CREATOR -->
+
+        <section class="section creator-section" id="creator">
+
+            <div class="section-heading">
+
+                <span class="section-label">YOUR WORDS, YOUR MAGIC</span>
+
+                <h2>Create a Wish From Your Heart</h2>
+
+                <p>
+                    Personalize your message, add a photo,
+                    choose a design and share your feelings.
+                </p>
+
+            </div>
+
+            <div class="creator-layout">
+
+                <!-- FORM -->
+
+                <div class="creator-panel">
+
+                    <form id="wishForm">
+
+                        <label for="occasion">Choose an occasion</label>
+
+                        <select id="occasion" required>
+
+                            <option value="Birthday">Birthday</option>
+                            <option value="Anniversary">Anniversary</option>
+                            <option value="Sorry">Apology / Say Sorry</option>
+                            <option value="Love">I Love You</option>
+                            <option value="Friendship">Friendship</option>
+                            <option value="Festival">Festival</option>
+                            <option value="Thank You">Thank You</option>
+                            <option value="Good Morning">Good Morning</option>
+                            <option value="Good Night">Good Night</option>
+                            <option value="Custom">Custom Message</option>
+
+                        </select>
+
+
+                        <label for="recipient">Their name</label>
+
+                        <input
+                            id="recipient"
+                            type="text"
+                            maxlength="60"
+                            placeholder="Enter their beautiful name"
+                        >
+
+
+                        <label for="relationship">Your relationship</label>
+
+                        <select id="relationship">
+
+                            <option value="partner">Partner / Lover</option>
+                            <option value="crush">Crush</option>
+                            <option value="best friend">Best Friend</option>
+                            <option value="friend">Friend</option>
+                            <option value="husband">Husband</option>
+                            <option value="wife">Wife</option>
+                            <option value="mother">Mother</option>
+                            <option value="father">Father</option>
+                            <option value="family member">Family Member</option>
+                            <option value="other">Someone Special</option>
+
+                        </select>
+
+
+                        <label for="tone">Choose your style</label>
+
+                        <select id="tone">
+
+                            <option value="romantic">Romantic</option>
+                            <option value="cute">Cute and Sweet</option>
+                            <option value="emotional">Deeply Emotional</option>
+                            <option value="elegant">Elegant and Classy</option>
+                            <option value="funny">Funny and Playful</option>
+                            <option value="cinematic">Cinematic</option>
+                            <option value="sincere">Sincere and Heartfelt</option>
+
+                        </select>
+
+
+                        <label for="details">
+                            Tell us what you want to express
+                        </label>
+
+                        <textarea
+                            id="details"
+                            rows="4"
+                            maxlength="600"
+                            placeholder="Example: She always supports me, makes me smile, and means everything to me."
+                        ></textarea>
+
+
+                        <label for="theme">Choose card design</label>
+
+                        <select id="theme">
+
+                            <option value="romantic">Romantic Glow</option>
+                            <option value="cute">Cute Hearts</option>
+                            <option value="elegant">Elegant Gold</option>
+                            <option value="cinematic">Cinematic Night</option>
+
+                        </select>
+
+
+                        <label for="photo">Add a personal photo</label>
+
+                        <input
+                            id="photo"
+                            type="file"
+                            accept="image/*"
+                        >
+
+                        <small class="field-note">
+                            Your photo is previewed in this browser.
+                            It is not automatically uploaded to a server.
+                        </small>
+
+
+                        <label for="music">Background music (optional)</label>
+
+                        <input
+                            id="music"
+                            type="file"
+                            accept="audio/*"
+                        >
+
+                        <small class="field-note">
+                            Select an audio file you have permission to use.
+                        </small>
+
+
+                        <div class="form-buttons">
+
+                            <button
+                                type="button"
+                                class="button primary-button"
+                                id="generateButton">
+                                ✨ Generate My Wish
+                            </button>
+
+                            <button
+                                type="button"
+                                class="button secondary-button"
+                                id="surpriseButton">
+                                🎁 Surprise Me
+                            </button>
+
+                        </div>
+
+                        <p id="statusMessage" aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+
+
+                <!-- LIVE PREVIEW -->
+
+                <div class="preview-area">
+
+                    <div class="preview-title">
+                        <span>LIVE PREVIEW</span>
+                        <span class="live-dot">● LIVE</span>
+                    </div>
+
+                    <article class="wish-card theme-romantic" id="wishCard">
+
+                        <div class="card-decor">✦ ♥ ✦</div>
+
+                        <img
+                            id="photoPreview"
+                            class="photo-preview"
+                            alt="Your uploaded greeting photo"
+                            hidden
+                        >
+
+                        <div class="card-emoji" id="cardEmoji">🎂</div>
+
+                        <p class="card-kicker" id="cardKicker">
+                            A LITTLE SOMETHING FOR YOU
+                        </p>
+
+                        <h2 id="cardTitle">Happy Birthday!</h2>
+
+                        <div class="divider">♥</div>
+
+                        <div
+                            class="wish-message"
+                            id="wishMessage"
+                            aria-live="polite">
+                            Your beautiful personalized message
+                            will appear here.
+                        </div>
+
+                        <p class="card-recipient" id="cardRecipient">
+                            To someone special
+                        </p>
+
+                        <div class="card-footer">
+                            Made with ♥ on Forever Wishes AI
+                        </div>
+
+                    </article>
+
+
+                    <div class="preview-controls">
+
+                        <button class="button secondary-button"
+                                id="musicButton">
+                            ▶ Play Music
+                        </button>
+
+                        <button class="button secondary-button"
+                                id="confettiButton">
+                            🎉 Celebrate
+                        </button>
+
+                        <button class="button secondary-button"
+                                id="downloadButton">
+                            ⬇ Download Card
+                        </button>
+
+                    </div>
+
+
+                    <div class="share-controls">
+
+                        <button class="button primary-button"
+                                id="whatsappButton">
+                            Share on WhatsApp
+                        </button>
+
+                        <button class="button secondary-button"
+                                id="copyButton">
+                            Copy Message
+                        </button>
+
+                        <button class="button secondary-button"
+                                id="qrButton">
+                            Create QR Code
+                        </button>
+
+                    </div>
+
+                    <div id="qrContainer"></div>
+
+                    <p class="privacy-note">
+                        Your selected photo and audio stay in this
+                        browser unless you choose to share them.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FESTIVALS -->
+
+        <section class="section festival-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">CELEBRATE TOGETHER</span>
+
+                <h2>Make Every Celebration Special</h2>
+
+                <p>
+                    Discover greeting ideas for memorable occasions.
+                </p>
+
+            </div>
+
+            <div class="festival-grid">
+
+                <div class="festival-card">
+                    <span>🪔</span>
+                    <h3>Diwali</h3>
+                    <p>Share light, prosperity and happiness.</p>
+                </div>
+
+                <div class="festival-card">
+                    <span>🎆</span>
+                    <h3>New Year</h3>
+                    <p>Begin another beautiful chapter together.</p>
+                </div>
+
+                <div class="festival-card">
+                    <span>💘</span>
+                    <h3>Valentine's Day</h3>
+                    <p>Turn your feelings into a memory.</p>
+                </div>
+
+                <div class="festival-card">
+                    <span>🎄</span>
+                    <h3>Christmas</h3>
+                    <p>Spread warmth, kindness and joy.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="section about-section" id="about">
+
+            <span class="section-label">MADE WITH LOVE</span>
+
+            <h2>Because Some Feelings Deserve More Than Words</h2>
+
+            <p>
+                Forever Wishes AI helps you turn your feelings
+                into thoughtful messages and beautiful cards.
+                Whether it is an apology, a birthday, a celebration,
+                or a simple I love you, make the moment yours.
+            </p>
+
+            <a href="#creator" class="button primary-button">
+                Create Something Special ♥
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <a href="#home" class="footer-brand">Forever Wishes AI ♥</a>
+
+        <p>Every message tells a story. Make yours unforgettable.</p>
+
+        <p class="copyright">
+            © <span id="year"></span> Forever Wishes AI
+        </p>
+
+    </footer>
+
+
+    <!-- Confetti library -->
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <!-- QR code library -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Card image export library -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
